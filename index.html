@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do | Notes</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div class="nav">
+        <span class="heading">Todo-List | Note</span>
+    </div>
+    <div class="gap"></div>
+
+    <!-- dark theme and add icon button -->
+    <div class="btn-icon">
+        <button title="theme" class="btn" id="theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button title="Add Note" class="btn" id="add">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <!-- Todo List -->
+    <div class="wrapper">
+        <header>Todo App</header>
+        <div class="inputField">
+        <input type="text" placeholder="Add your new todo">
+        <button><i class="fas fa-plus"></i></button>
+        </div>
+        <ul class="todoList">
+        <!-- data are comes from local storage -->
+        </ul>
+        <div class="footer">
+        <span>You have <span class="pendingTasks"></span> pending tasks</span>
+        <button>Clear All</button>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.2/marked.min.js"
+        integrity="sha512-TgRjo84fuo2G1bsVMHOEQI9yVfH7BdNyeyo55lnjXDKSpv8XxbBShnQUZZX9/OBNGQUMOJrYG0XxHQO8ZOGdYg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

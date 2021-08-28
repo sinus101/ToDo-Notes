@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*==== Variable Define ====*/
+:root {
+  --primary-color: #089696;
+  --secondry-color: #40E0D0;
+  --third-color: #4afdeb;
+  --white-color: #fff;
+  --white-color-sec: #f8f5f1;
+  --text-color: #555;
+  --text-gray: #999;
+  --black-color: #000;
+  --primary-font: "Roboto", sans-serif;
+  --secondry-font: "Quicksand", sans-serif;
+  --width: 400px;
+  --height: 400px;
+}
+.dark-theme{
+  --primary-color: #222;
+  --secondry-color: #555;
+  --third-color: #777;
+  --white-color: #fff;
+  --white-color-sec: #777;
+  --text-color: #fff;
+  --text-gray: #999;
+  --black-color: #555;
+  --primary-font: "Roboto", sans-serif;
+  --secondry-font: "Quicksand", sans-serif;
+}
+
+/* 
+===================================
+    Custom CSS
+===================================
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: var(--secondry-font);
+  color: var(--text-color);
+  font-size: 100%;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+textarea{
+  background-color: var(--white-color-sec);
+}
+.main p{
+  background-color: var(--white-color-sec);
+  margin: 0;
+  padding: 1rem;
+}
+/* 
+===================================
+    Custom Scrollbar
+===================================
+*/
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondry-color);
+}
+
+/* 
+===================================
+    Navbar
+===================================
+*/
+.nav{
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  background-color: var(--secondry-color);
+  z-index: 1;
+  text-align: center;
+  padding-top: 0.8rem;
+  box-shadow: 0 0 20px 1px black;
+}
+.gap{
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-color: blueviolet;
+  text-align: center;
+  opacity: 0;
+}
+.heading{
+  font-size: 2.375rem;
+  color: var(--white-color);
+  text-shadow: 2px 2px 5px black;
+}
+
+/* 
+===================================
+    Note and Button
+===================================
+*/
+.btn-icon {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.btn {
+  display: block;
+  background-color: var(--third-color);
+  border: none;
+  color: var(--white-color);
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 0 1.3rem 2px rgba(0, 0, 0, 0.9);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.btn:active{
+  transform: scale(1.1);
+}
+
+.add:focus {
+  outline: none;
+}
+
+.add:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.note {
+  background-color: var(--white-color-sec);
+  -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px 20px;
+  width: var(--width);
+  height: var(--height);
+}
+
+.note textarea {
+  outline: none;
+  border: none;
+  font-family: var(--primary-font);
+  font-size: 1.2 rem;
+  font-weight: 500;
+  color: var(--text-color);
+  height: var(--height);
+  width: 100%;
+  padding: 20px;
+}
+
+.note .controls {
+  background-color: var(--secondry-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.note .controls button {
+  background-color: transparent;
+  border: none;
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.controls button:focus {
+  outline: none;
+}
+
+.controls button:active {
+  outline: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* 
+===================================
+    Todo List
+===================================
+*/
+
+.wrapper{
+  background: var(--white-color-sec);
+  height: 436px;
+  width: var(--width);
+  margin: 30px 20px;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper header{
+  font-size: 30px;
+  font-weight: 600;
+}
+.wrapper .inputField{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+.inputField input{
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid var(--text-gray);
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  background: #f2f2f2;
+}
+.inputField input:focus{
+  border-color: var(--secondry-color);
+}
+.inputField button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: var(--white-color);
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: var(--secondry-color);
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button:hover,
+.footer button:hover{
+  background: var(--primary-color);
+}
+.inputField button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .todoList{
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todoList li{
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  color: #555;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.todoList li .icon{
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: orangered;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon{
+  right: 0px;
+}
+.wrapper .footer{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer button{
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: var(--primary-color);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.footer button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
